@@ -16,16 +16,18 @@ if (IdadeDoUsuario >= IdadePermitida) {
     console.log ("Somente Maiores de 18 Anos!");
 }
 
-var Participantes = Number (85);
+var Participantes = Number (100);
 
-while (Participantes < 100) {
-    break;
+if (Participantes < 100) {
+    Participantes++;
+    console.log(Participantes);
 }
-if (Participantes > 100) {
+else{
+    Participantes++;
     console.log("Desculpe, o Evento Atingiu a Capacidade Maxima de Participantes");
 }
 
-if(DataEvento > DataAtual && IdadeDoUsuario >= IdadePermitida && Participantes < 100){
+if(DataEvento > DataAtual && IdadeDoUsuario >= IdadePermitida && Participantes <= 100){
     console.log("Seu Evento Foi Criado com Sucesso!");
 } else {
     console.log("Erro. O Evento Nao Pode ser Criado.");
